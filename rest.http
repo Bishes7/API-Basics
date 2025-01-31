@@ -1,0 +1,16 @@
+### Get request
+GET http://localhost:8000/
+
+
+
+###Post Request
+
+POST http://localhost:8000/
+
+Content-Type: application/json
+{
+    "id" : "5",
+    "fName": "Bishes",
+    "lName":"Adhikari"
+    
+}
