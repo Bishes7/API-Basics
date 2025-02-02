@@ -3,7 +3,7 @@ import express, { application } from "express";
 const app = express();
 const PORT = 8000;
 
-import userRouter from "./src/userRouter";
+import userRouter from "./src/userRouter.js";
 // we need to use the middleware
 app.use("/api/v1/users", userRouter);
 

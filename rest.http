@@ -1,25 +1,31 @@
+//we need to make a variable to store the EP
+
+@apiEP = http://localhost:8000/api/v1/users    
+
+
 ### Get request
-GET http://localhost:8000?id=1&fName=Anish&lName=Sigdel
+GET {{apiEP}}?id=1&fName=Anish&lName=Lamivhhane
 
-
+ 
 
 ###Post Request
-POST http://localhost:8000/
+POST {{apiEP}}  
 Content-Type: application/json      
-
+  
 {
     "id" : "5",
     "fName": "Laba",   
     "lName":"Bhandari"   
     
-}
+}    
 
 ###Delete request
-DELETE http://localhost:8000/44
+DELETE {{apiEP}}
+Content-Type: application/json
 
 
 ### Put Method
-PUT http://localhost:8000/
+PUT {{apiEP}}
 Content-Type: application/json 
 Authorization: special
 

@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 
-const DB = [
+let DB = [
   {
     id: 1,
     fName: "Bishes ",
@@ -16,12 +16,19 @@ const DB = [
 ];
 
 router.get("/", (req, res) => {
-  res.json({
-    message: "todo,",
-    DB,
-  });
-  console.log(req.query);
-  DB.push(req.query);
+  try {
+    throw new Error("testing error");
+    console.log(req.query);
+    res.json({
+      message: "todo,",
+      DB,
+    });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({
+      message: "error" + error.message,
+    });
+  }
 });
 
 router.post("/", (req, res) => {
